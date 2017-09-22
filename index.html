@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% for post in paginator.posts %}
+{% if post.date < site.time %}
 <article class="main-article">
   <div class="wrap-content">
     <header class="header-article">
@@ -15,6 +16,7 @@ layout: default
     <p>{{post.description}} <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
   </div>
 </article>
+{% endif %}
 {% endfor %}
 
 <div class="pagination">
