@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for post in paginator.posts %}
-{% if post.date < site.time %}
+{% if post.published %}
 <article class="main-article">
   <div class="wrap-content">
     <header class="header-article">
