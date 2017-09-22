@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Software engineering student and machine learning enthusiast.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "belval.org" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.belval.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social
 #facebook: #Add your Facebook
@@ -14,9 +14,6 @@ github: Belval
 
 # Contact form
 email: edouard@belval.org
-
-# Comments
-discus-identifier: # Add your Disqus identifier
 
 # Paginate
 paginate: 5
