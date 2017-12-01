@@ -2,6 +2,7 @@
 <html lang="en">
 {% include head.html %}
 <body>
+  <div id="particles-js"></div>
 
   {% include sidebar.html %}
 
@@ -10,6 +11,7 @@
       {{content}}
     </div>
   </main>
-
+	<script src="{{ "assets/js/particles.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "assets/js/index.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
