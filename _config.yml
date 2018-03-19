@@ -3,9 +3,7 @@ title: Belval
 description: > # this means to ignore newlines until "baseurl:"
   Software engineering student and machine learning enthusiast.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://www.belval.org" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "https://www.belval.org" # the base hostname & protocol for your site, e.g. http://example.com
 # Social
 #facebook: #Add your Facebook
 #twitter: #Add your Twitter

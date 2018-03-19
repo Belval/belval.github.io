@@ -7,7 +7,6 @@
  *    IE on Windows Phone and in iOS.
  */
 html {
-  height: 100vh;
   line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -50,7 +49,6 @@ figure,
 main {
   /* 1 */
   display: block;
-  min-height: 100vh;
 }
 
 /**
@@ -743,7 +741,6 @@ html {
   }
 }
 body {
-  min-height: 100vh;
   color: #515151;
   margin: 0;
   background-color: #ecf3f3;
@@ -881,8 +878,7 @@ pre code {
 
 .content {
   position: relative;
-  background-color: #ECF3F3;
-  max-width: 48rem;
+  max-width: 64rem;
   margin-left: 22rem;
   margin-right: 2rem;
   padding: 4rem 1rem;
@@ -1049,7 +1045,8 @@ img.post-image, img.page-img {
 
 #particles-js canvas {
     position: absolute;
-    width: 100%;
+    min-height: 100%;
     height: 100%;
+    width: 100%;
     z-index: -1;
 }
