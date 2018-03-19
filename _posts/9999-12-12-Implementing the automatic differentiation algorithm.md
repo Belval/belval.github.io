@@ -16,3 +16,7 @@ Back to automatic differentiation, since everything is usually easier with an ex
 Picture a 4 layers neural net with this configuration:
 
 For the sake of the example, let's say the second layer's nodes uses ReLU for an activation function, the third's are sigmoid and the last is softmax. The backpropagation algorithm allows us to calculate the gradient based on the error.
+
+## Sources
+
+Atilim Günes Baydin and Barak A. Pearlmutter. **Automatic differentiation of Algorithms for Machine Learning**. National University of Ireland https://arxiv.org/pdf/1404.7456.pdf (2014)
