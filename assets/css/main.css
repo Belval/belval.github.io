@@ -932,6 +932,7 @@ img.post-image, img.page-img {
 
 .pagination {
   text-align: center;
+  cursor: pointer;
 }
 .pagination a.next, .pagination a.previous {
   padding: 1rem 2.5rem;
