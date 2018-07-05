@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Implementing the automatic differentiation algorithm"
-date:   2018-12-01 00:00:00 -0500
+date:   9999-12-01 00:00:00 -0500
 published: false
 ---
 
