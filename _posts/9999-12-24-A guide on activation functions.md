@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "A guide on activation functions"
-date:   2018-07-01 00:00:00 -0500
-description: "From the venerable tanh to the very popular ReLU and the mostly unknown PReLU, this guide is meant as a quick overview of some notable functions presented through the years" 
+date:   2018-12-01 00:00:00 -0500
 published: false
 ---
 
@@ -22,13 +21,14 @@ https://arxiv.org/pdf/1505.00853.pdf
 
 $$f(x) = max(0, x)$$
 
+
 $$f'(x) = \begin{cases}0, x \leq 0 \\ 1, x \gt 0 \end{cases}$$
 
 {:center: style="text-align: center"}
 !['/assets/img/activation_functions/ReLU.png'](/assets/img/activation_functions/ReLU.png)
 {:center}
 
-By far the most known and the most used, ReLU is an activation function that for any given input X below 0 will return 0. Concisely, its formula is f(x) = max(0, x). While the concept itself of an asymmetric function as a better way to model the neuron draws its source from a paper published in *Nature* in 2000. The name *Rectified Linear Unit* was coined by Goeffrey Hinton and Vinod Nair in 2010 in their paper "Rectified Linear Unit Improve Restricted Boltzmann Machines".
+By far the most known and the most used, ReLUs are an activation function that for any given input X below 0 will return 0. Concisely, its formula is f(x) = max(0, x). While the concept itself of an asymmetric function as a better way to model the neuron draws its source from a paper published in *Nature* in 2000. The name *Rectified Linear Unit* was coined by Goeffrey Hinton and Vinod Nair in 2010 in their paper "Rectified Linear Unit Improve Restricted Boltzmann Machines".
 
 It gained in popularity for being simple, fast and easy to optimize.
 
