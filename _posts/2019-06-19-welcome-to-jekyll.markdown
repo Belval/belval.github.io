@@ -1,25 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Real-time air quality analysis"
 date:   2019-06-19 11:28:50 -0400
-categories: jekyll update
+categories: side-projects
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+[https://github.com/Belval/air-quality-station](https://github.com/Belval/air-quality-station)
 
-Jekyll also offers powerful support for code snippets:
+I may or may not be a bit weird, but I do love collecting data on my surroundings at all times. From capturing packets from my Google Home or my Alexa, to analyzing data from my Fitbit watch, I believe that few things are as interesting as aggregating data and drawing conclusions from it.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Air quality is one of these things that are intangible. If sufficiently bad, you might feel it, yet most of the time we are unaware of the changes in air quality around us, especially inside.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Which is why I bought an [SNS-011 sensor]() off AliExpress about a month ago, to collect measurements  from the air quality inside my 
