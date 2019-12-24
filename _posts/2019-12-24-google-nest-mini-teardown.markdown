@@ -55,7 +55,7 @@ When we remove the board, we can see that little changed on the other side, with
 
 Unfortunately, the actual CPU is under a soldered protector/heatsinks, unlike the previous iteration that had removable ones. Since I do not own the proper tools to remove the metal shield, and wish to keep the device itself, I will rely on [the official spec sheet](https://store.google.com/ca/product/google_nest_mini_specs) which claims that it is a Quad-core 64-bit ARM CPU clocked at 1.4GHz which would be an upgrade over the dual-core processor boasted by the 1st generation.
 
-And there ends the teardown, below you will find a more exhaustive hardware list.
+And there ends the teardown, below you will find a more exhaustive hardware list. While I lack the skillset to properly reverse engineer and root the GNM, I hope that Google's generosity will put it in the ends of more capable hackers because in its current form, it would be a more than capable Linux server with no less than 4GB of RAM, 4GB of flash memory and a quad-core processor. 
 
 ## The hardware
 
