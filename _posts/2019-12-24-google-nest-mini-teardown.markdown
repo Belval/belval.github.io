@@ -17,7 +17,7 @@ Reading online, I was first amazed by how little hardware information was availa
 - New Synaptics AS370 A1 for on-device voice inference
 - More flash (256MB is now 4GB)
 
-## Getting inside
+## The ~~torture~~ teardown
 
 The previous iteration had a fun little textured rubber circle that was glued to the bottom and hid the screws. Unfortunately, there was no such thing here, but there was a screw under a removable rubber pad that was easily accessible. After removing the screw, it was not immediately clear to me how to open it so I heated the bottom of the GNM with a heat gun. Turns out that was a very bad idea and the rubber cover came off deformed and unusable.
 
