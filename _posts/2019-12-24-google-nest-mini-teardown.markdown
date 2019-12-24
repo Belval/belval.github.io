@@ -40,7 +40,7 @@ Unscrewing those will reveal the board itself.
 <img src="{{ site.baseurl }}/imgs/2_thermals_2.jpg" alt="thermals-2" width="350" />
 </center>
 
-The first thing that we notice is the newly added thermal compound between the Synaptic chip and both of the DDR3-1866 modules. It seems that some actual effort was put into dissipating the additional heat. One interesting difference is that the 1st generation device included an internal heatsink that was made of unknown metal (perhaps nickel?) while the new one boasts a full-plastic separator but with a more sophisticated heat management design.
+The first thing that we notice is the newly added thermal compound between the Synaptic chip and both of the DDR3-1866 modules. It seems that some actual effort was put into dissipating the heat. Some back over the envelope calculations can shed some light on the reason why. The previous generation used a 5V@1.8A power supply, for a maximum TDP of 9W. The new generation on the other hand, uses a 14V@1.1A power supply which outputs no less than 15.4W, or about 70% more. With that in mind, one interesting difference is that the 1st generation device included an internal heatsink that was made of unknown metal (perhaps nickel?) while the new one boasts a full-plastic separator but with a more sophisticated heat management design.
 
 <center>
 <img src="{{ site.baseurl }}/imgs/2_pcb_down.jpg" alt="pcb-down" width="350" />
