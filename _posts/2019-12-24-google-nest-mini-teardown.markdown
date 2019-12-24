@@ -19,7 +19,7 @@ Reading online, I was first amazed by how little hardware information was availa
 
 ## Getting inside
 
-The previous iteration had a fun little textured rubber circle that was glued to the bottom and hid the screws. Unfortunately, there was no such thing here, but there was a screw under a removable rubber pad that was easily accessible. After removing the screw, it was not immediatly clear to me how to open it so I heated the bottom of the GNM with a heat gun. Turns out that was a very bad idea and the rubbercover came off deformed and unusable.
+The previous iteration had a fun little textured rubber circle that was glued to the bottom and hid the screws. Unfortunately, there was no such thing here, but there was a screw under a removable rubber pad that was easily accessible. After removing the screw, it was not immediately clear to me how to open it so I heated the bottom of the GNM with a heat gun. Turns out that was a very bad idea and the rubber cover came off deformed and unusable.
 
 <center>
 <img src="{{ site.baseurl }}/imgs/2_result.jpg" alt="an-unusable-cover" width="350" />
@@ -33,21 +33,21 @@ Playing with it for a while I noticed that it could be rotated and opened, revea
 <img src="{{ site.baseurl }}/imgs/2_in.jpg" alt="in" width="350" />
 </center>
 
-Unscrewing those will reveal board itself.
+Unscrewing those will reveal the board itself.
 
 <center>
 <img src="{{ site.baseurl }}/imgs/2_thermals.jpg" alt="thermals" width="350" />
 <img src="{{ site.baseurl }}/imgs/2_thermals_2.jpg" alt="thermals-2" width="350" />
 </center>
 
-The first thing that we notice is the newly added thermal compound between the Synaptic chip and both of the DDR3-1866 modules. It seems that some actual effort was put into dissipating the additional heat. One interesting difference is that the 1st generation device included an internal heatsink that was made of an unknown metal (prehaps nickel?) while the new one boast a full-plastic seperator, but with a more sophisticated heat management design.
+The first thing that we notice is the newly added thermal compound between the Synaptic chip and both of the DDR3-1866 modules. It seems that some actual effort was put into dissipating the additional heat. One interesting difference is that the 1st generation device included an internal heatsink that was made of unknown metal (perhaps nickel?) while the new one boasts a full-plastic separator but with a more sophisticated heat management design.
 
 <center>
 <img src="{{ site.baseurl }}/imgs/2_pcb_down.jpg" alt="pcb-down" width="350" />
 <img src="{{ site.baseurl }}/imgs/2_synaptics.jpg" alt="synaptics" width="350" />
 </center>
 
-When we remove the board, we can see that little changed on the other side, with both microphones and four LEDs are in their old spot. The new microphone can be seen on the image.
+When we remove the board, we can see that little changed on the other side, with both microphones and four LEDs are in their old spot. The new microphone can be seen in the image.
 
 <center>
 <img src="{{ site.baseurl }}/imgs/2_pcb_up.jpg" alt="pcb_up" width="350" />
