@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Portable air quality sensor"
+title:  "DIY power bank"
 date:   2020-02-01 11:28:50 -0400
 categories: hardware
 ---
 
-# Making my air quality sensor portable
+# DIY power bank
 
 Recently while wondering about how to test my portable HVAC unit I asked myself how I could design a simple system to log PM2.5 and PM10 measurements in my room. I then designed an OrangePi-based solution that uses an [SNS011](https://www.aliexpress.com/item/32724933436.html) sensor. The result was not very pretty but was able to get reasonably precise values at a price point of 15$. I might go over the conception of the system itself in a later post as I believe it would be interesting, but in the meantime, there is a nice overview of the project + source code available on the [GitHub project page](https://github.com/Belval/air-quality-station).
 
@@ -41,11 +41,15 @@ I would have to agree that it looks like a rat nest but that is due to the 6 wir
 
 ## Results
 
+<center>
+
 | | DIY | Anker PowerCore |
 |:-----:|:-----:|:-----:|
 | Capacity (mAh) | 20400 | 10000 |
 | Charge (mAh) | X | 12900 |
 | Discharge (mAh) | X | X |
+
+</center>
 
 Now it is worth noting that the step-up converter used was a [TZT 0.9-5V To 5V DC-DC Step-Up](https://www.aliexpress.com/item/32807311456.html) which is undeniably garbage even at its very low price point. The efficiency of 85% is but one of its drawbacks. It actually burned during one of my tests at 300mA which below the spec'ed maximum intensity of 480mA. To replace it, I bought a bulkier [DC-DC Step Up Converter MT3608 Booster](https://www.aliexpress.com/item/32970333618.html) which goes all the way up to 2A.
 
