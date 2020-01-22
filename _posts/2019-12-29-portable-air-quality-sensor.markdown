@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Portable air quality sensor"
-date:   2020-03-22 11:28:50 -0400
+date:   2020-02-01 11:28:50 -0400
 categories: hardware
 ---
 
