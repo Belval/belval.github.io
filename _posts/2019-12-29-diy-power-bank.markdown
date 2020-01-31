@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DIY power bank"
-date:   2020-02-01 11:28:50 -0400
+date:   2020-02-02 11:28:50 -0400
 categories: hardware
 ---
 
