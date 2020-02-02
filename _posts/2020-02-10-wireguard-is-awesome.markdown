@@ -23,6 +23,42 @@ Wireguard is **new**, which means that it hasn't been audited as much as the oth
 
 The configuration files are a breeze to put together, and adding clients is only one `wg-quick` command away. See for yourself, here are my two `wg0.conf` files, totaling less than 25 lines together.
 
+```
+[Interface]
+Address = 10.10.0.1/24
+Address = fd86:ea04:1111::1/64
+SaveConfig = true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE; ip6tables -A FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE; ip6tables -D FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+ListenPort = 51820
+PrivateKey = [Server-Private-Key]
+
+[Peer]
+PublicKey = [Peer2-Public-Key]
+AllowedIPs = 10.10.0.2/32, fd86:ea04:1111::2/128
+
+[Peer]
+PublicKey = [Peer3-Public-Key]
+AllowedIPs = 10.10.0.3/32, fd86:ea04:1111::3/128
+
+[Peer]
+PublicKey = [Peer4-Public-Key]
+AllowedIPs = 10.10.0.4/32, fd86:ea04:1111::4/128
+```
+
+```
+[Interface]
+Address = 10.10.0.2/32
+Address = fd86:ea04:1111::2/128
+SaveConfig = true
+PrivateKey = [Peer2-Private-Key]
+
+[Peer]
+PublicKey = [Peer2-Public-Key]
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = [ServerIP]:51820
+```
+
 As a bonus, once that is set up, you can add Android/iOS clients with little effort and again, it. just. works.
 
 ## Conclusion
