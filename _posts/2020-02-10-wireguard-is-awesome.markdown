@@ -5,7 +5,7 @@ date:   2020-02-10 11:28:50 -0400
 categories: networking
 ---
 
-# Wireguard is awesome
+## Wireguard is awesome
 
 With Wireguard being added to Linus' tree, it seems everything is coming together for its release as a viable VPN solution. As an avid self-hoster, I need such a solution to direct my local server traffic to an outside VPS that acts as a proxy. This ensures that my ever-changing public IP address does not cause unexpected outages. Moreover, it allows me to serve content on my HTTP (80) and HTTPS (443) ports, both of which are blocked by my ISP.
 

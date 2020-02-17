@@ -51,11 +51,11 @@ I would have to agree that it looks like a rat nest but that is due to the 6 wir
 
 </center>
 
-Now it is worth noting that the step-up converter used was a [TZT 0.9-5V To 5V DC-DC Step-Up](https://www.aliexpress.com/item/32807311456.html) which is undeniably garbage even at its very low price point. The efficiency of 85% is but one of its drawbacks. It actually burned during one of my tests at 300mA which below the spec'ed maximum intensity of 480mA. To replace it, I bought a bulkier [DC-DC Step Up Converter MT3608 Booster](https://www.aliexpress.com/item/32970333618.html) which goes all the way up to 2A.
+Now it is worth noting that the step-up converter used was a [TZT 0.9-5V To 5V DC-DC Step-Up](https://www.aliexpress.com/item/32807311456.html) which is undeniably garbage even at its very low price point. The efficiency of 85% is but one of its drawbacks. It actually burned during one of my tests at 300mA which below the spec'ed maximum intensity of 480mA. To replace it, I bought a bulkier [DC-DC Step Up Converter MT3608 Booster](https://www.aliexpress.com/item/32970333618.html) which goes all the way up to 1A before getting too hot to touch, from a rated max of 2A.
 
 ## Conclusion
 
-Coming at a price point of 21.74$ (including shipping and taxes) the DIY version beats the 30$ Anker Power Core with a comfortable margin. Now obviously this is excluding the time it took to solder the whole thing but it was a very enjoyable activity nonetheless. Furthermore, while my use case draws very little amps and therefore does not need fancy features like fast-charging, the Anker power bank supports fast charge at 3+ amps, which is not something that could be done with the current build. While the 3 TP4056 modules in parallel add up to 3 amps, they are probably not designed to run at their peak intensity for long periods.
+Coming at a price point of 21.74$ (including shipping and taxes) the DIY version beats the 30$ Anker Power Core with a comfortable margin. Now obviously this is excluding the time it took to solder the whole thing and the fact that it looks like an homemade bomb. Furthermore, while my use case draws very little amps and therefore does not need fancy features like fast-charging, the Anker power bank supports fast charge at 3+ amps, which is not something that could be done with the current build. While the 3 TP4056 modules in parallel add up to 3 amps, they are probably not designed to run at their peak intensity for long stretches of time.
 
 For further reading, I would recommend [DIY Lithium Batteries by Micah Toll](https://www.amazon.ca/DIY-Lithium-Batteries-Build-Battery/dp/0989906701). He goes over most of the off-the-shelf chemistry and explains good practices.
 
