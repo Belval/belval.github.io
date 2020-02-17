@@ -21,7 +21,7 @@ That's true, without a doubt. The thing is, I did try to get IPSec working throu
 
 Wireguard is **new**, which means that it hasn't been audited as much as the other two solutions, if at all. Regardless, its killer feature is quite a simple one: it is incredibly easy to setup. I'm not talking "follow a tutorial to get it working in an hour" easy, it's more of 15 minutes during a class easy. 
 
-The configuration files are a breeze to put together, and adding clients is only one `wg-quick` command away. See for yourself, here are my two `wg0.conf` files, totaling less than 25 lines together.
+The configuration files are a breeze to put together, and adding clients is only one `wg-quick` command away. See for yourself, here are my two `wg0.conf` files, totaling less than 27 lines together.
 
 ```
 [Interface]
@@ -35,6 +35,7 @@ PrivateKey = [Server-Private-Key]
 
 [Peer]
 PublicKey = [Peer2-Public-Key]
+PersistentKeepalive = 25
 AllowedIPs = 10.10.0.2/32, fd86:ea04:1111::2/128
 
 [Peer]
@@ -55,6 +56,7 @@ PrivateKey = [Peer2-Private-Key]
 
 [Peer]
 PublicKey = [Peer2-Public-Key]
+PersistentKeepalive = 25
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = [ServerIP]:51820
 ```
@@ -64,3 +66,7 @@ As a bonus, once that is set up, you can add Android/iOS clients with little eff
 ## Conclusion
 
 If it wasn't obvious from the heavy-handed praise above, I think Wireguard is the solution to a whole lot of VPN headaches. Any serious production usage should wait after more auditing has been done, but on paper, it is an excellent piece of software.
+
+## Edit
+
+I noticed that the VPN would stay connected, yet no packets could go through. I fixed the problem by adding `PersistentKeepalive = 25` to both configurations.
