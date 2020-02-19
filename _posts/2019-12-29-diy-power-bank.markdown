@@ -45,9 +45,9 @@ I would have to agree that it looks like a rat nest but that is due to the 6 wir
 
 | | DIY | Anker PowerCore |
 |:-----:|:-----:|:-----:|
-| Capacity (mAh) | 20400 | 10000 |
-| Charge (mAh) | X | 12900 |
-| Discharge (mAh) | X | X |
+| Capacity (mAh) | 20400@3.7V | 10000@3.7V |
+| Charge (mAh) | X | 12900@5.2V |
+| Discharge (mAh) | 11488@5.2V | X |
 
 </center>
 
