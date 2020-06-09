@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Google Nest Mini Teardown"
-date:   2019-12-24 11:28:50 -0400
+date:   2119-12-24 11:28:50 -0400
 categories: hardware
 ---
 
