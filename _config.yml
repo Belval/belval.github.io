@@ -9,10 +9,10 @@
 title: Tales from the Latent Space
 email: edouard@belval.org
 description: > # this means to ignore newlines until "baseurl:"
-    Software engineering student & machine learning enthusiast, I mostly work with Python, C#, and C/C++. 
+    Research Engineer  & machine learning enthusiast, I mostly work with Python, C#, and C/C++Research Engineer@Amazon. M.Sc Student@MILA. I mostly work with Python, C++ and CUDA. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://belval.org" # the base hostname & protocol for your site
 github_username:  Belval
 
 # Build settings
-markdown: kramdown
+markdown: GFM
