@@ -15,4 +15,6 @@ url: "https://belval.org" # the base hostname & protocol for your site
 github_username:  Belval
 
 # Build settings
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
