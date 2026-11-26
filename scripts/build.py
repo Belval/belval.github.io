@@ -49,7 +49,7 @@ def read_posts():
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',meta['slug']):raise ValueError('Invalid slug')
         meta['date']=date.fromisoformat(str(meta['date']))
         meta['body']=markdown.markdown(body,extensions=['tables','fenced_code','attr_list'])
-        meta['body']=meta['body'].replace('<p><em>Tool/controller time only;', '<p class="figure-note"><em>Tool/controller time only;')
+        meta['body']=meta['body'].replace('<p><em>', '<p class="figure-note"><em>')
         meta['url']='/writing/'+meta['slug']+'/'
         meta['read_minutes']=max(1,round(len(body.split())/220))
         posts.append(meta)
