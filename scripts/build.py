@@ -48,7 +48,7 @@ def read_posts():
             if not meta.get(key):raise ValueError(f'Missing {key} in {file}')
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',meta['slug']):raise ValueError('Invalid slug')
         meta['date']=date.fromisoformat(str(meta['date']))
-        meta['body']=markdown.markdown(body,extensions=['tables','fenced_code','attr_list'])
+        meta['body']=markdown.markdown(body,extensions=['tables','fenced_code','attr_list','md_in_html'])
         meta['body']=meta['body'].replace('<p><em>', '<p class="figure-note"><em>')
         meta['url']='/writing/'+meta['slug']+'/'
         meta['read_minutes']=max(1,round(len(body.split())/220))
