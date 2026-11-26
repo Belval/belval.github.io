@@ -1,0 +1,91 @@
+{
+  "title": "Prepare each frame once",
+  "height": 850,
+  "description": "Nine tracks on the same two frames share the extracted features.",
+  "nodes": [
+    {
+      "id": "pair",
+      "x": 48,
+      "y": 480,
+      "w": 398,
+      "h": 168,
+      "title": "Frame pair",
+      "body": [
+        "Decode both images"
+      ]
+    },
+    {
+      "id": "cache",
+      "x": 561,
+      "y": 480,
+      "w": 398,
+      "h": 168,
+      "title": "Prepare features",
+      "body": [
+        "Cache on each frame"
+      ]
+    },
+    {
+      "id": "match",
+      "x": 1074,
+      "y": 480,
+      "w": 398,
+      "h": 168,
+      "title": "Track nine points",
+      "body": [
+        "Reuse both feature sets"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "pair",
+      "to": "cache"
+    },
+    {
+      "from": "cache",
+      "to": "match"
+    }
+  ],
+  "caption": "Same JPEG pair and nine points per batch \u00b7 median CPU time \u00b7 coordinates checked",
+  "kicker": "03 / TRACKING",
+  "panels": [
+    {
+      "x": 48,
+      "y": 200,
+      "w": 1424,
+      "h": 220,
+      "color": "ink"
+    }
+  ],
+  "labels": [
+    {
+      "x": 100,
+      "y": 222,
+      "text": "350 \u2192 74 ms",
+      "role": "metric",
+      "color": "paper"
+    },
+    {
+      "x": 108,
+      "y": 356,
+      "text": "Nine-point tracking",
+      "role": "body",
+      "color": "paper"
+    },
+    {
+      "x": 845,
+      "y": 247,
+      "text": "Reuse across all nine points",
+      "role": "feature",
+      "color": "paper"
+    },
+    {
+      "x": 845,
+      "y": 313,
+      "text": "Two frames, two feature sets",
+      "role": "body",
+      "color": "paper"
+    }
+  ]
+}
