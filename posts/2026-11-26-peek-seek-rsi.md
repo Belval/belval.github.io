@@ -6,11 +6,11 @@ excerpt: Taking a phone photo gets awkward when both hands are holding the assem
 hero: /assets/peek-and-seek.png
 ---
 
-If you’ve ever tried to get help from an agent while working in 3D, you’ll know how awkward it is to take pictures with your phone while you’re actively trying to assemble the thing. I wanted Astra to tell me whether I was holding two of the parts it had designed the right way around, which is exactly the sort of question that gets harder to photograph the moment you let go of either one to pick up your phone.
+As part of a side project creating a real product with Astra. One issue I kept running into was the 3D assemblies themselves. While both OpenAI and Anthropic have clearly invested a lot of improving the one-shot quality of their models for 3D models, there will **always** be something to fix on the first try. The recurring issue I found was in reporting those issues to the model. The goto is to take a picture with your phone with a quick note for it to create a GitHub issue, but if you’ve ever tried, you’ll know how awkward it is to take pictures with your phone while you’re actively trying to assemble something is somewhat painful. I wanted Astra to just "see" what I was doing and steer me through the assembly while taking my verbal notes on what worked and what didn't.
 
-I wanted a more hands-free experience, and I already had a Tapo C210 that could pan and tilt, so I gave Astra control of the camera. That way, if it needed a better look, I could keep holding the parts while it changed the angle. To see how well that worked, I asked it to find the 3D printer in my office. Every time it turned the camera, it had to wait another 2.4 seconds just to see where it had landed.
+I wanted a more hands-free experience, and I already had two Tapo C210 that could pan and tilt, so I gave Astra control of them (why not right?). That way, if it needed a better look, I could keep holding the parts while it changed the angle. The C210 is about as inexpensive as they come, roughly 25$ for video, two-way audio and network connectivity through wi-fi. Only challenge: every time it turned the camera, it had to wait another 2.4 seconds just to see where it had landed.
 
-The useful number here is 15 fps, because it means the camera has another frame roughly every 67 ms whether the agent asks for one or not. Our Python implementation would open the stream, get one of those frames and close it, so the next call got to do all of that again. The agent rewrote the server in Rust and left a reader running between calls, which brought the median down to 1.63 ms (for the latest frame already in memory, in case anyone is wondering what firmware I put on this thing).
+That's the beauty of agents, I simply asked Codex to "fix it". Our Python implementation would open the stream, get one of those frames and close it, so the next call got to do all of that again. The agent rewrote the server in Rust and left a reader running between calls, which brought the median down to 1.63 ms (for the latest frame already in memory, in case anyone is wondering what firmware I put on this thing).
 
 ![A persistent RTSP reader feeds a shared latest-frame buffer. Each MCP request reads the preview already there.](/assets/rust-pipeline.png)
 
@@ -18,7 +18,7 @@ We rebuilt the Python and Rust versions and timed 100 warm snapshot calls on eac
 
 ## A second camera makes a decent test harness
 
-I wanted a way to exercise the camera tool without having to sit at the desk holding up a part every time we changed the code, so we had two agents play I Spy. Peek picked something in the room and kept the coordinates to itself, which meant Seek had to move its own camera and bring back a picture that somebody else could judge. Both cameras have googly eyes, a small hardware modification that makes having two of them looking around my office feel considerably less creepy.
+We had fixed image capture, but I wanted a way to exercise the camera tool without having to sit at the desk holding up a part every time we changed the code, so I came up with the "I Spy" protocol. Peek (camera #1) would pick something in the room and keep the coordinates to itself, then Seek (camera #2) has to move its own camera and bring back a picture that somebody else could judge.
 
 ![Peek withholds the object's coordinates. Seek searches, checks the image and timings, patches its tools, and tries a fresh target. Seven games and 216 motion trials supplied feedback.](/assets/improvement-loop.png)
 
