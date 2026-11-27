@@ -9,7 +9,7 @@ hero_caption: Meet Peek and Seek. My partner suggested the four googly eyes as a
 
 I’m working on a side project with Astra to build a physical product, and one thing I keep running into is how to report problems that only show up when I try to assemble the 3D-printed parts. OpenAI and Anthropic have both gotten better at generating a usable 3D model on the first try, but in my experience there’s always something to fix once I have the pieces in my hands.
 
-My usual approach is to take a picture with my phone and give Astra a quick note so it can file a GitHub issue, which works fine until I need both hands to show what’s wrong. I wanted Astra to see what I was doing, steer me through the assembly, and take my verbal notes on what worked and what didn’t.
+The default approach is to take a picture with my phone and give Astra a quick note so it can file a GitHub issue, which works fine until I need both hands to show what’s wrong. I wanted Astra to see what I was doing, steer me through the assembly, and take my verbal notes on what worked and what didn’t.
 
 I already had two Tapo C210s that could pan and tilt, so I gave Astra control of both (why not, right?). For roughly $25 apiece, they have Wi-Fi, video, and two-way audio. I could keep holding the parts while Astra adjusted the angle, but every time it turned a camera it took another 2.4 seconds to see where it had landed.
 
