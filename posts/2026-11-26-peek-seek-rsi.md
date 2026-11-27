@@ -2,13 +2,13 @@
 title: Giving Astra a camera to help assemble 3D-printed parts
 date: 2026-11-26
 slug: peek-seek-rsi
-excerpt: Astra had designed the parts, and I wanted it to see how I was putting them together. Getting a useful second look out of a $25 camera took some work.
+excerpt: Taking a phone photo gets awkward when both hands are holding the assembly together. I wanted Astra to be able to get its own view of the parts it had designed.
 hero: /assets/peek-and-seek.png
 ---
 
-Once I’d 3D-printed the parts that Astra had designed, I wanted it to walk me through putting them together. It already knew how the pieces were supposed to fit, but if I held two of them up and asked whether I had one backwards, it would help considerably if it could see what I was holding. I had a Tapo C210 that could pan and tilt, so I gave Astra a camera tool and tried a simple test before getting any parts involved. Could it find the 3D printer in my office?
+If you’ve ever tried to get help from an agent while working in 3D, you’ll know how awkward it is to take pictures with your phone while you’re actively trying to assemble the thing. I wanted Astra to tell me whether I was holding two of the parts it had designed the right way around, which is exactly the sort of question that gets harder to photograph the moment you let go of either one to pick up your phone.
 
-That was enough to turn up a problem I’d also have at the workbench. Every time Astra moved the camera to get a better angle, it had to wait another 2.4 seconds just to see where it had landed.
+I wanted a more hands-free experience, and I already had a Tapo C210 that could pan and tilt, so I gave Astra control of the camera. That way, if it needed a better look, I could keep holding the parts while it changed the angle. To see how well that worked, I asked it to find the 3D printer in my office. Every time it turned the camera, it had to wait another 2.4 seconds just to see where it had landed.
 
 The useful number here is 15 fps, because it means the camera has another frame roughly every 67 ms whether the agent asks for one or not. Our Python implementation would open the stream, get one of those frames and close it, so the next call got to do all of that again. The agent rewrote the server in Rust and left a reader running between calls, which brought the median down to 1.63 ms (for the latest frame already in memory, in case anyone is wondering what firmware I put on this thing).
 
