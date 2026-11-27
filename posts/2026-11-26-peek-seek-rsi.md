@@ -1,12 +1,12 @@
 ---
-title: Giving an AI a camera to help assemble 3D-printed parts
+title: Giving Astra a camera to help assemble 3D-printed parts
 date: 2026-11-26
 slug: peek-seek-rsi
-excerpt: My AI agent had designed the parts, and I wanted it to see how I was putting them together. Getting a useful second look out of a $25 camera took some work.
+excerpt: Astra had designed the parts, and I wanted it to see how I was putting them together. Getting a useful second look out of a $25 camera took some work.
 hero: /assets/peek-and-seek.png
 ---
 
-Once I’d 3D-printed the parts that my AI agent, Astra, had designed, I wanted it to walk me through putting them together. It already knew how the pieces were supposed to fit, but if I held two of them up and asked whether I had one backwards, it would help considerably if it could see what I was holding. I had a Tapo C210 that could pan and tilt, so I gave Astra a camera tool and tried a simple test before getting any parts involved. Could it find the 3D printer in my office?
+Once I’d 3D-printed the parts that Astra had designed, I wanted it to walk me through putting them together. It already knew how the pieces were supposed to fit, but if I held two of them up and asked whether I had one backwards, it would help considerably if it could see what I was holding. I had a Tapo C210 that could pan and tilt, so I gave Astra a camera tool and tried a simple test before getting any parts involved. Could it find the 3D printer in my office?
 
 That was enough to turn up a problem I’d also have at the workbench. Every time Astra moved the camera to get a better angle, it had to wait another 2.4 seconds just to see where it had landed.
 
