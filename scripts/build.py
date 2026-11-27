@@ -27,7 +27,7 @@ def page(title,content,path='/',description=None,image=None):
 <link rel="alternate" type="application/atom+xml" title="{escape(SITE['title'])}" href="/feed.xml">
 <link rel="stylesheet" href="/assets/brand-theme.css"><link rel="stylesheet" href="/assets/style.css"></head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="navigation wrap"><a class="wordmark" href="/" aria-label="Edouard Belval, home">edouard belval<span>.</span></a>
+<header class="navigation wrap"><a class="wordmark" href="/" aria-label="Belval, home">Belval<span>.</span></a>
 <nav aria-label="Main navigation"><a href="/#writing">Writing</a><a href="/about/">About</a><a href="{SITE['github']}">GitHub<svg aria-hidden="true" width=".8em" height=".8em" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10l8-8M3 2h7v7"/></svg></a></nav></header>
 <main id="main">{content}</main>
 <footer class="wrap"><a href="/" class="footer-name">Tales from the Latent Space</a><p>Built, measured, written down.</p><a href="/feed.xml">RSS ↗</a></footer>
