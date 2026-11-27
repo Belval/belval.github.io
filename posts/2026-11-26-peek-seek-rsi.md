@@ -4,7 +4,7 @@ date: 2026-11-26
 slug: peek-seek-rsi
 excerpt: Taking a phone photo gets awkward when both hands are holding the assembly together. I wanted Astra to be able to get its own view of the parts it had designed.
 hero: /assets/peek-and-seek.png
-hero_caption: Meet Peek and Seek. Four googly eyes go a long way. Background edited.
+hero_caption: Meet Peek and Seek. My partner suggested the four googly eyes as a way to make the premise less creepy. Whether that works is left as an exercise to the reader.
 ---
 
 I’m working on a side project with Astra to build a physical product, and one thing I keep running into is how to report problems that only show up when I try to assemble the 3D-printed parts. OpenAI and Anthropic have both gotten better at generating a usable 3D model on the first try, but in my experience there’s always something to fix once I have the pieces in my hands.
