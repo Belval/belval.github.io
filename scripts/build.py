@@ -23,7 +23,7 @@ def page(title,content,path='/',description=None,image=None):
 <title>{escape(title)}</title><meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}"><meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(description)}"><meta property="og:type" content="article"><meta property="og:url" content="{escape(canonical)}">{image_tag}
-<meta name="theme-color" content="#F5F3EC"><link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F5F3EC"><link rel="icon" href="/assets/mark.svg?v=2" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="{escape(SITE['title'])}" href="/feed.xml">
 <link rel="stylesheet" href="/assets/brand-theme.css"><link rel="stylesheet" href="/assets/style.css"></head><body>
 <a class="skip" href="#main">Skip to content</a>
