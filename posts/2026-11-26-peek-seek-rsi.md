@@ -1,12 +1,12 @@
 ---
-title: Giving Astra a view of the Floft workbench
+title: Giving an AI a camera to help assemble 3D-printed parts
 date: 2026-11-26
 slug: peek-seek-rsi
-excerpt: I wanted Astra to see the parts it had designed for Floft so it could help me put them together. Getting a useful second look out of a $25 camera took some work.
+excerpt: My AI agent had designed the parts, and I wanted it to see how I was putting them together. Getting a useful second look out of a $25 camera took some work.
 hero: /assets/peek-and-seek.png
 ---
 
-For Floft, I wanted Astra to be able to walk me through assembling the parts it had designed once I’d printed them. Astra already had the design, but if I held up two printed parts and asked whether I had one of them backwards, it would help considerably if it could see what I was holding. I had a Tapo C210 that could pan and tilt, so I gave Astra a camera tool and tried a simple test before getting any parts involved. Could it find the 3D printer in my office?
+Once I’d 3D-printed the parts that my AI agent, Astra, had designed, I wanted it to walk me through putting them together. It already knew how the pieces were supposed to fit, but if I held two of them up and asked whether I had one backwards, it would help considerably if it could see what I was holding. I had a Tapo C210 that could pan and tilt, so I gave Astra a camera tool and tried a simple test before getting any parts involved. Could it find the 3D printer in my office?
 
 That was enough to turn up a problem I’d also have at the workbench. Every time Astra moved the camera to get a better angle, it had to wait another 2.4 seconds just to see where it had landed.
 
@@ -33,4 +33,4 @@ Take two images and ask the tracker where nine points went between them. All nin
 On the same pair of test images, those nine answers took **74 ms instead of 350 ms**, and we checked that the coordinates agreed. The gain on a live preview call was smaller. Faster trace scanning and SIMD base64 encoding brought the median from **1.70 to 1.54 ms** over 600 requests per release, with tracing enabled and the agent’s thinking time excluded. [Benchmarks and raw traces](https://github.com/Belval/onvif-mcp/tree/ddc847f/benchmarks/mcp-optimization)
 
 
-The test I still care about for Floft is what happens after Astra asks me to turn a part over. It can now get another look without spending two seconds reconnecting to the camera. Whether it can look at what’s in my hand and give me the right next assembly step is a different experiment, and that’s the one I wanted the camera for in the first place.
+The assembly test I still care about is what happens after Astra asks me to turn a part over. It can now get another look without spending two seconds reconnecting to the camera. Whether it can look at what’s in my hand and give me the right next assembly step is a different experiment, and that’s the one I wanted the camera for in the first place.
