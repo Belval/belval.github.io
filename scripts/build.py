@@ -74,9 +74,11 @@ def build():
         hero+='<section class="archive wrap"><h2>More field notes</h2>'+''.join(f'<p><a href="{p["url"]}">{escape(p["title"])}</a></p>' for p in posts[1:])+'</section>'
     write('index.html',page('',hero,image=latest['hero']))
     for post in posts:
+        caption = post.get('hero_caption')
+        caption_html = f'<figcaption>{escape(caption)}</figcaption>' if caption else ''
         header=f'''<article><header class="post-header wrap"><a class="back" href="/">← All field notes</a><p class="eyebrow">AGENTS × HARDWARE / {post['date'].strftime('%d %B %Y').upper()} / {post['read_minutes']} MIN READ</p>
 <h1>{escape(post['title'])}</h1><p class="standfirst">{escape(post['excerpt'])}</p></header>
-<figure class="post-hero wrap"><img src="{post['hero']}" alt="Peek and Seek, two real Tapo cameras with googly eyes, on an oak desk" width="1672" height="941" fetchpriority="high"><figcaption>Meet Peek and Seek. Four googly eyes go a long way. Background edited.</figcaption></figure>
+<figure class="post-hero wrap"><img src="{post['hero']}" alt="Peek and Seek, two real Tapo cameras with googly eyes, on an oak desk" width="1672" height="941" fetchpriority="high">{caption_html}</figure>
 <div class="prose">{post['body']}</div><div class="post-end wrap"><span class="eyebrow">END OF FIELD NOTE</span><a class="text-link" href="https://github.com/Belval/onvif-mcp">Explore the source ↗</a></div></article>'''
         write(post['url'].strip('/')+'/index.html',page(post['title'],header,post['url'],post['excerpt'],post['hero']))
     about='''<section class="about wrap"><p class="eyebrow">ABOUT / EDOUARD BELVAL</p><h1>Make it work.<br><em>Then measure it.</em></h1><div class="about-copy"><p>I build software, machine learning systems, and the occasional piece of hardware.</p><p>This is my notebook for experiments at their intersection: what I tried, what the measurements said, and what I changed next.</p><a class="text-link" href="https://github.com/Belval">Find my work on GitHub ↗</a></div></section>'''
